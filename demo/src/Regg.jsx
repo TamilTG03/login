@@ -22,14 +22,38 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    const{name,email,phone,address,confirmAddress}=formData;
 
-    const { address, confirmAddress } = formData;
-
-    if (address !== confirmAddress) {
-      alert("Password and Confirm Password do not match");
+    if( name&& email &&phone&& address && confirmAddress){
+      if(phone.length!=10){
+        alert("invalid phonenumber!")
+        return;
+     }
+  
+      
+  
+     if(address.length<=5){
+      alert("password must be 6 charectors")
       return;
+     }
+  
+     
+        
+  
+      if (address !== confirmAddress) {
+        alert("Password and Confirm Password do not match");
+        return;
+      }
+  
+      
     }
 
+    else{
+      alert("fill all the blankes")
+      return;
+    }
+    
+ 
     await postDataForStudent(formData);
     clearForm();
   };
@@ -93,6 +117,8 @@ const Register = () => {
       </form>
     </div>
   );
+
 };
+
 
 export default Register;

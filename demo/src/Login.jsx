@@ -26,8 +26,9 @@ const Login = () => {
       if (!responsedata) {
         alert("Check username or password");
       } else {
-        alert("Welcome");
-      }
+        // Redirect to another website
+        window.location.href = "https://www.amazon.in/?tag=msndeskstdin-21&ref=pd_sl_5myc57zwmd_e&adgrpid=1315017564951826&hvadid=82188862025546&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=144034&hvtargid=kwd-82189528356367:loc-90&hydadcr=14452_2334185&msclkid=97444e81f7f9193a306e28560370d279";
+    }
     } catch (error) {
       console.error('Error:', error);
     }
