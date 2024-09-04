@@ -37,12 +37,15 @@ const Login = () => {
     navigate('/Regg')};
 
   return (
-    <div>
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="email">Email:</label>
+    <div className='container  '>
+  <div className='row d-flex justify-content-center  mt-5'>
+    <div className='col col-md-6 col-sm-6 col-lg-12'>
+      <h1 className='text-primary mb-4 text-center'>Login</h1>
+      <form onSubmit={handleSubmit} className='d-flex flex-column align-items-center'>
+        <div className='form-group mb-3'>
+          <label htmlFor="email" className='h4 text-muted'>Email</label>
           <input
+            className='form-control '
             type="email"
             id="email"
             name="email"
@@ -51,9 +54,10 @@ const Login = () => {
             required
           />
         </div>
-        <div>
-          <label htmlFor="address">Password:</label>
+        <div className='form-group mb-3'>
+          <label htmlFor="address" className='h4 text-muted'>Password</label>
           <input
+            className='form-control '
             type="password"
             id="address"
             name="address"
@@ -62,14 +66,16 @@ const Login = () => {
             required
           />
         </div>
-        <div>
-          <button type="submit">Login</button>
-          <button type="button" onClick={handleSignInClick}>
-            Sign in
-          </button>
+        <div className='mt-4 d-flex'>
+          <button type="submit" className='btn btn-primary me-3'>Login</button>
+          <button type="button" onClick={handleSignInClick} className='btn btn-primary'>Sign in</button>
         </div>
       </form>
     </div>
+  </div>
+</div>
+
+  
   );
 };
 

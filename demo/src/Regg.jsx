@@ -90,32 +90,77 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Name:</label>
-          <input type="text" id="name" value={formData.name} onChange={handleChange} />
+    <div className='container  '>
+  <div className='row mt-5 d-flex justify-content-center'>
+    <div className='col col-md-8 col-lg-6'>
+      <h1 className='text-primary mb-4 text-center'>Register</h1>
+      <form onSubmit={handleSubmit} className='d-flex flex-column align-items-center'>
+        <div className='form-group mb-3 w-100'>
+          <label htmlFor="name" className='h4 text-muted'>Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            className='form-control'
+            required
+          />
         </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input type="email" id="email" value={formData.email} onChange={handleChange} />
+        <div className='form-group mb-3 w-100'>
+          <label htmlFor="email" className='h4 text-muted'>Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            className='form-control'
+            required
+          />
         </div>
-        <div>
-          <label htmlFor="phone">Phone:</label>
-          <input type="text" id="phone" value={formData.phone} onChange={handleChange} />
+        <div className='form-group mb-3 w-100'>
+          <label htmlFor="phone" className='h4 text-muted'>Phone</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            value={formData.phone}
+            onChange={handleChange}
+            className='form-control'
+            required
+          />
         </div>
-        <div>
-          <label htmlFor="address">Create Password:</label>
-          <input type="password" id="address" value={formData.address} onChange={handleChange} />
+        <div className='form-group mb-3 w-100'>
+          <label htmlFor="address" className='h4 text-muted'>Create Password</label>
+          <input
+            type="password"
+            id="address"
+            name="address"
+            value={formData.address}
+            onChange={handleChange}
+            className='form-control'
+            required
+          />
         </div>
-        <div>
-          <label htmlFor="confirmAddress">Confirm Password:</label>
-          <input type="password" id="confirmAddress" value={formData.confirmAddress} onChange={handleChange} />
+        <div className='form-group mb-4 w-100'>
+          <label htmlFor="confirmAddress" className='h4 text-muted'>Confirm Password</label>
+          <input
+            type="password"
+            id="confirmAddress"
+            name="confirmAddress"
+            value={formData.confirmAddress}
+            onChange={handleChange}
+            className='form-control'
+            required
+          />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit" className='btn btn-primary'>Submit</button>
       </form>
     </div>
+  </div>
+</div>
+
   );
 
 };

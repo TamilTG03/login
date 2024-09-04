@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './Login'; // Ensure this is the correct path
 import Register from './Regg'; // Ensure this is the correct path
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
